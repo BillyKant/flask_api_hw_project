@@ -87,3 +87,21 @@ ul#horizontal-list a:nth-last-child(1){
     border-top: 3px solid black;
     margin-top: 20vh;
 }
+
+/* Profile Styles */
+.hero-section{
+    height: 95vh;
+    background-image: url(../images/classic_car_show.jpg);
+    background-size: cover;
+    /* -webkit-clip-path: circle(50% at 26% 28%); */
+    clip-path: circle(50% at 26% 28%);
+    position: relative;
+}
+
+.header-image{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 15%;
+    top: 10rem;
+    color: white;
+}
