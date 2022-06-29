@@ -12,6 +12,20 @@
             {{ form.password(class= "form-control", placeholder = "Now your password, haven't you ever been on a computer?") }}
         </fieldset>
 
+        {% if form.first_name %}
+        <fieldset id="first-field">
+            {{ form.first_name.label }}
+            {{ form.first_name(class= "form-control", placeholder = "First name") }}
+        </fieldset>
+
+        <fieldset id="last-field">
+            {{ form.last_name.label }}
+            {{ form.last_name(class= "form-control", placeholder = "last name") }}
+        </fieldset>
+
+        {% endif %}
+
+
         <!-- Submit Button -->
         {{ form.submit_button(class="btn btn-primary btn-block") }}
     </div>
