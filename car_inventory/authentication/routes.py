@@ -16,7 +16,7 @@ def signup():
             password = form.password.data
             first_name = form.first_name.data
             last_name = form.last_name.data
-            print(email, password)
+            print(email, password, first_name, last_name)
 
             user = User(email, first_name=first_name, last_name=last_name, password = password)
 
@@ -54,3 +54,9 @@ def signin():
         raise Exception('Invalid Form Data: Please Check Your Form')
 
     return render_template('signin.html', form=form)
+
+@auth.route('/logout')
+@login_required
+def logout():
+    logout_user()
+    return redirect(url_for('site.home'))
